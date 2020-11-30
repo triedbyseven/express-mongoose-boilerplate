@@ -8,8 +8,8 @@ const server = Express();
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
-server.get('/', (req: Request, res: Response) => {
-    console.log(req);
+server.get('/', (_: Request, res: Response) => {
+    console.log('Main route / triggered.');
     res.send('<h1>Hello world!</h1>');
 });
 
